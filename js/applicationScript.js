@@ -41,7 +41,7 @@ var init = function() {
 	
   };
 
-  client = new Las2peerWidgetLibrary("http://loripsum.net:80/", iwcCallback);
+  client = new Las2peerWidgetLibrary("http://steen.informatik.rwth-aachen.de:6083/CAE/github/", iwcCallback);
   
 
 
@@ -63,7 +63,7 @@ var getContent = function(){
 
 //end variable declaration
 
-  client.sendRequest("GET", "api/1/plaintext", "", "", {}, false,
+  client.sendRequest("GET", "frontendComponent-neues-Widget3/files?path=", "", "", {}, false,
   function(data, type) {
     console.log(data);
     //Also update the html element?
