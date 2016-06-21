@@ -41,33 +41,44 @@ var init = function() {
 	
   };
 
-  client = new Las2peerWidgetLibrary("http://localhost:8080/", iwcCallback);
+  client = new Las2peerWidgetLibrary("http://loripsum.net:80/", iwcCallback);
   
-Y({
-  db: {
-    name: 'memory'
-  },
-  connector: {
-    name: 'websockets-client',
-    room: 'cae-room'
-  },
-  sourceDir: "http://y-js.org/bower_components",
-  share: {
-    textarea:'Text'
-  }
-}).then(function (y) {
-  window.yTextarea = y
-
-    y.share.textarea.bind(document.getElementById('textarea'))
-
-})
 
 
+  $('#getLoremIpsum').on('click', function() {
+    //start parameter initiation
 
+    //end parameter initiation
+    getContent();
+  })
 
 
 }
 
+
+// getContent
+var getContent = function(){
+
+//start variable declaration
+
+//end variable declaration
+
+  client.sendRequest("GET", "api/1/plaintext", "", "", {}, false,
+  function(data, type) {
+    console.log(data);
+    //Also update the html element?
+    //$("#textarea").html("Updated Element");
+  },
+  function(error) {
+    console.log(error);
+    //Also update the html element?
+    //$("#textarea").html("Updated Element");
+  });
+  
+  $("#textarea").html("Updated Element");
+
+
+}
 
 
 $(document).ready(function() {
