@@ -98,7 +98,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   <!-- container for actual page content -->
   <div class="container" id="main-content">
 
-   <textarea id='textarea' class="form-control" rows="5"> </textarea>
+   <textarea id='textarea' class="form-control" rows="5"><div></div> </textarea>
  
   </div>
 
