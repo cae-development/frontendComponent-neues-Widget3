@@ -67,6 +67,9 @@ var getContent = function(){
   function(data, type) {
     console.log(data);
     //Also update the html element?
+    var files = data.files.map(function(file){ 
+        return file.path 
+    }).join(","); 
     //$("#textarea").html("Updated Element");
   },
   function(error) {
