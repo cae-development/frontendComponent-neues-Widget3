@@ -69,7 +69,7 @@ var getContent = function(){
     //Also update the html element?
     var files = data.files.map(function(file){ 
         return file.path 
-    }).join(","); 
+    }).join(", "); 
     $("#textarea").html(files);
   },
   function(error) {
