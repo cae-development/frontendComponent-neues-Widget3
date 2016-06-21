@@ -45,7 +45,7 @@ var init = function() {
   
 
 
-  $('#getLoremIpsum').on('click', function() {
+  $('#getFiles').on('click', function() {
     //start parameter initiation
 
     //end parameter initiation
